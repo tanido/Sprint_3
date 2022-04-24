@@ -40,7 +40,6 @@ public class NegativeLoginCourierTest {
     public static Object [][] getCourierData() {
         return new Object[][] {
                 {CourierCredentials.courierLoginWithoutLogin(courier), 400, "Недостаточно данных для входа"},
-                //Без пароля тест падает, и в постмане возвращается 504, вряд ли это ожидаемо)
                 {CourierCredentials.courierLoginWithoutPassword(courier), 400, "Недостаточно данных для входа"},
                 {CourierCredentials.courierLoginWithWrongLogin(courier), 404, "Учетная запись не найдена"},
                 {CourierCredentials.courierLoginWithWrongPassword(courier), 404, "Учетная запись не найдена"},
